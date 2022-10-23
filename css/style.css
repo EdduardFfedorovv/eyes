@@ -900,10 +900,13 @@ body {
 .header__phone-box {
   display: flex;
   justify-content: flex-end;
+  z-index: 100;
+  background: #222;
 }
 
 .header__phone {
   padding: 10px 20px 0 0px;
+  z-index: 100;
 }
 
 .header__phone-img {
@@ -1329,6 +1332,7 @@ body {
     display: flex;
     justify-content: space-between;
     margin-bottom: 25px;
+    background: #222;
   }
 
   .menu__btn {
@@ -1370,26 +1374,26 @@ body {
 
   .menu__list {
     border-color: #101010;
-    display: none;
-    opacity: 0;
+    display: block;
+    width: 100%;
     position: absolute;
     left: 0;
     right: 0;
-    top: 35px;
+    top: -216%;
     max-width: 100%;
     height: auto;
     padding: 30px;
     margin: 0 auto;
     text-align: center;
     background: #222;
-    z-index: 1005;
+    z-index: -1;
     border-top: 1px solid #101010;
-    transform: translateY(79px);
+    transition: all 0.5s ease-in;
   }
 
   .menu__list.menu__list--active {
-    opacity: 1;
-    display: block;
+    top: 100%;
+    transition: all 0.5s ease-out;
   }
 
   .footer__inner {
