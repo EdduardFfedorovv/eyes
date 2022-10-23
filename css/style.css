@@ -1467,7 +1467,7 @@ body {
   }
 
   .menu__list {
-    transform: translateY(109px);
+    top: 25%;
   }
 
   .header__logo {
